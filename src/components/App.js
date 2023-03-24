@@ -5,15 +5,15 @@ class App extends React.Component{ //is not a functional component and does not 
     
     constructor(props){
         super(props); //calls React.Component's constructor and sets the value of the prop
-        console.log("Props ===>",props);
-        console.log(props.data);
-        const {data} = props;
+        console.log("The value of this ==>",this);
+        //const {data,data1,data2} =  this.props;
     }
 
     render(){ //reuired
+        const {data} = this.props;
         return (
             <div>
-                Hello
+                Hello- {data}
             </div>
         )
     }
