@@ -1,19 +1,18 @@
 import React from "react";
+import Navigation from "./Navigation/index";
 
 
-class App extends React.Component{ //is not a functional component and does not support hooks
-    
+class App extends React.Component{
+
     constructor(props){
-        super(props); //calls React.Component's constructor and sets the value of the prop
-        console.log("The value of this ==>",this);
-        //const {data,data1,data2} =  this.props;
+        super(props);
     }
 
-    render(){ //reuired
-        const {data} = this.props;
+    render(){
+        const {data,data1,data2} = this.props;
         return (
             <div>
-                Hello- {data}
+                <Navigation hometitle={data} abouttitle={data1} contacttitle={data2}/>
             </div>
         )
     }
