@@ -5,8 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script>
+        console.log("In Head");
+        const handleClick = (e) => {
+            console.log("Clicked",e);
+        }
+
+        function changed(){
+            console.log("Changed no 2");
+        }
+    </script>
 </head>
 <body>
-    <div id="root"></div>
+    <div id="root"></div> <!-- react entry point-->
+    
+    <br/>
+    <hr/>
+    Custom HTML and JS
+    <input type="text" id="name" onchange="changed()" onclick="handleClick(e)" name="name" value="" placeholder="Enter Name"/>
+
+    <input type="text" id="age" onchange="changed()" onclick="handleClick(e)" name="name" value="" placeholder="Enter Age"/>
+
+    <script>
+        console.log("In body");
+        const nameElementNode1 = document.getElementById("name");
+        console.log("nameElementNode ==>",nameElementNode1);
+
+        nameElementNode1.addEventListener('click',(e)=>{
+            console.log("The event object ===>",e);
+            console.log("The target element ===>",e.target);
+        })
+    </script>
 </body>
 </html>
