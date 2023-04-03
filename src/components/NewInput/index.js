@@ -10,7 +10,7 @@ class NewInput extends React.Component{
         const {label} = this.props;
         return (
             <div>
-                <label>Enter {label}</label>
+                <label>Enter {label}</label> &nbsp;
                 <input type="text" name={label} value="" placeholder={`Enter ${label}`} />
             </div>
         )

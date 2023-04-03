@@ -22,19 +22,23 @@
     <br/>
     <hr/>
     Custom HTML and JS
-    <input type="text" id="name" onchange="changed()" onclick="handleClick(e)" name="name" value="" placeholder="Enter Name"/>
+    <input type="text" id="name" onchange="changed()" onclick="handleClick()" name="name" value="" placeholder="Enter Name"/>
 
-    <input type="text" id="age" onchange="changed()" onclick="handleClick(e)" name="name" value="" placeholder="Enter Age"/>
+    <input type="text" id="age-new" onchange="changed()" onclick="handleClick()" name="name" value="" placeholder="Enter Age"/>
 
     <script>
-        console.log("In body");
-        const nameElementNode1 = document.getElementById("name");
-        console.log("nameElementNode ==>",nameElementNode1);
-
-        nameElementNode1.addEventListener('click',(e)=>{
+        const clickCallBack = (e)=>{
             console.log("The event object ===>",e);
             console.log("The target element ===>",e.target);
-        })
+        };
+
+        console.log("In body");
+        const nameElementNode1 = document.getElementById("name");
+        const ageEl = document.getElementById("age-new");
+        console.log("nameElementNode ==>",nameElementNode1);
+
+        nameElementNode1.addEventListener('click',clickCallBack)
+        ageEl.addEventListener('click',clickCallBack);
     </script>
 </body>
 </html>
